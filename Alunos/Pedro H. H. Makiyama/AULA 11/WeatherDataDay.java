@@ -1,3 +1,5 @@
+package com.pedro;
+
 public class WeatherDataDay {
 
     private double temp;
