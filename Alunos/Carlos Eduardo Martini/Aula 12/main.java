@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class main {
@@ -23,6 +24,11 @@ public class main {
         System.out.println("ATV2: " + nomesMaiusculo);
 
         //ATV3
-        
+        List<String> palav = Arrays.asList("se", "talvez", "hoje", "sábado", "se", "quarta", "sábado");
+        Map<String, Long> contagemPalavras =
+                            palav.stream()
+                                 .collect(Collectors.groupingBy(p -> p, Collectors.counting()));
+
+        System.out.println("ATV3: " + contagemPalavras);
     }
 }
